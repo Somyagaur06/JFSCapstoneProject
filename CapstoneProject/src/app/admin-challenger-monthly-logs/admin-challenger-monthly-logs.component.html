@@ -1,0 +1,140 @@
+
+<mat-card class="text-center">
+
+
+    
+    
+    
+<form class=" myForm">
+
+    <div class="form-group" class="text-center p-2">
+
+        <label><h2><b><i>Select Month</i></b></h2></label><br>
+
+    <select name="month"  [(ngModel)]="month" (change)="defaultValues()" >
+
+        <option value="July"><b><i>July</i></b></option>
+
+        <option value="August"><b><i>August</i></b></option>
+
+        <option value="September"><b><i>September</i></b></option>
+
+
+
+
+    </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="checkMonth()">View Monthly Logs</button>
+
+</form>
+
+</mat-card>
+
+
+
+
+
+
+
+<mat-card class=" myTable" *ngIf="month!=null && monthlyLogs.length>0">
+    
+    <table class="table table-striped ml-1" >
+    
+    
+    <thead class="text-center">
+    
+        <tr >
+            <th class="text-center p-4"><b><i>Full-Name</i></b></th>
+            <th class="text-center p-4"><b><i>Username</i></b></th>
+            <th class="text-center p-4"><b><i>Weight</i></b></th>
+            <th class="text-center p-4"><b><i>Height</i></b></th>
+            <th class="text-center p-4"><b><i>Chest</i></b></th>
+            <th class="text-center p-4"><b><i>Waist</i></b></th>
+            <th class="text-center p-4"><b><i>Shoulders</i></b></th>
+            <th class="text-center p-4"><b><i>Biceps</i></b></th>
+            <th class="text-center p-4"><b><i>Forearms</i></b></th>
+            <th class="text-center p-4"><b><i>Thighs</i></b></th>
+            
+    
+    
+    
+    </thead>
+    
+    
+    <tr *ngFor="let data of monthlyLogs">
+    
+    
+    
+    
+        <td class="text-center p-4">{{data.fullName}}</td>
+    
+        <td class="text-center p-4">{{data.username}}</td>
+    
+        <td class="text-center p-4">{{data.weight}}</td>
+    
+        
+        <td class="text-center p-4">{{data.height}}</td>
+        
+        <td class="text-center p-4">{{data.chest}}</td>
+        
+        <td class="text-center p-4">{{data.waist}}</td>
+        
+        <td class="text-center p-4">{{data.shoulders}}</td>
+        
+        <td class="text-center p-4">{{data.biceps}}</td>
+        
+        <td class="text-center p-4">{{data.forearms}}</td>
+        
+        <td class="text-center p-4">{{data.thighs}}</td>
+        
+        
+    
+    
+    
+    
+    
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </mat-card>

@@ -1,0 +1,63 @@
+
+
+<mat-card class="text-center">
+<h2><b><i>Add New Batch</i></b></h2>
+
+<form class="p-4">
+
+<div class="form-group">
+
+    <label><b><i>Select Batch</i></b></label><br>
+
+<select name="batch" [(ngModel)]="batch.batchName">
+
+<option *ngFor="let data of batches"  value="{{data}}">{{data}}</option>
+
+
+</select>
+
+
+</div>
+
+
+<div class="form-group">
+
+<label><b><i>Batch Start Date</i></b></label><br>
+
+<input type="text" name="startDate" [(ngModel)]="batch.batchStartDate">
+
+</div>
+
+
+<div class="form-group">
+
+<label><b><i>Batch End Date</i></b></label><br>
+
+<input type="text" name="endDate" [(ngModel)]="batch.batchEndDate">
+
+</div>
+
+
+<button type="submit" class="btn btn-primary" (click)="addBatch()">Submit</button>
+<button type="submit" class="btn btn-primary m-3" (click)="clear()">Clear</button>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+</mat-card>

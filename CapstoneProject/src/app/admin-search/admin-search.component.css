@@ -1,0 +1,50 @@
+
+mat-card{
+
+    width: 20%;
+    margin: 60px auto;
+    background-color: floralwhite;
+}
+
+input{
+    width: 90%;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    padding-left: 45px;
+}
+
+
+button{
+    width: 30%;
+    margin-left: 35%;
+    border: .5px solid blue;
+    border-radius: 8px;
+}
+
+
+select{
+    width: 80%;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    padding-left: 45px;
+}
+
+.myTable{
+    width: 50%;
+    margin: 60px auto;
+    
+    background-color: white;
+}
+
+th{
+    background-color: #004d80;
+  color: white;
+}

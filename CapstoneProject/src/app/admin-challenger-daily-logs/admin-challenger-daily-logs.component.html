@@ -1,0 +1,129 @@
+
+<mat-card class="text-center">
+
+
+<mat-card-title><h2><b><i>Challenger Daily Logs</i></b></h2></mat-card-title>
+
+<form class="p-3 text-center">
+
+<div class="form-group ">
+
+    <label><b><i>Select Date</i></b></label>
+
+<input type="date" [(ngModel)]="date" name="date" (change)="defaultValues()">
+
+
+</div>
+
+
+<button type="submit" class="btn btn-primary" (click)="findLogs()">Search</button>
+
+</form>
+
+
+</mat-card>
+
+
+
+
+
+<mat-card class="myTable" *ngIf="flag==true">
+
+<table  class=" table table-striped ml-1" >
+
+
+<thead class=" text-center ">
+
+    <tr>
+        <th class="text-center p-4"><b><i>Full-Name</i></b></th>
+        <th class="text-center p-4"><b><i>Username</i></b></th>
+        <th class="text-center p-4"><b><i>Date</i></b></th>
+        <th class="text-center p-4"><b><i>Breakfast</i></b></th>
+        <th class="text-center p-4"><b><i>Lunch</i></b></th>
+        <th class="text-center p-4"><b><i>Dinner</i></b></th>
+        <th class="text-center p-4"><b><i>Fruits</i></b></th>
+        <th class="text-center p-4"><b><i>Vegetables</i></b></th>
+        <th class="text-center p-4"><b><i>Workout</i></b></th>
+        <th class="text-center p-4"><b><i>Extra Activity</i></b></th>
+
+
+
+</thead>
+
+
+<tr *ngFor="let data of dailyLogs">
+
+
+
+
+    <td class="text-center p-4">{{data.fullName}}</td>
+
+    <td class="text-center p-4">{{data.username}}</td>
+
+    <td class="text-center p-4">{{data.date}}</td>
+
+    
+    <td class="text-center p-4">{{data.breakfast}}</td>
+    
+    <td class="text-center p-4">{{data.lunch}}</td>
+    
+    <td class="text-center p-4">{{data.dinner}}</td>
+    
+    <td class="text-center p-4">{{data.fruits}}</td>
+    
+    <td class="text-center p-4">{{data.vegetables}}</td>
+    
+    <td class="text-center p-4">{{data.workout}}</td>
+    
+    <td class="text-center p-4">{{data.extraActivity}}</td>
+    
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+</mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

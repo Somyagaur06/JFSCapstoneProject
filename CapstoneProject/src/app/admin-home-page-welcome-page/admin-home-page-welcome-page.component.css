@@ -1,0 +1,16 @@
+
+mat-card{
+   
+    margin-left: 25%;
+    width: 50% ;
+    margin:120px auto;
+    background-color: floralwhite;
+}
+
+h3{
+    letter-spacing: 1px;
+}
+
+hr{
+    background-color: black;
+}

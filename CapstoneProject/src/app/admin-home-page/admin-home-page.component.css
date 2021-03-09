@@ -1,0 +1,29 @@
+.body1{
+   background-image: url('/assets/admin1.jpg');
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+}
+
+
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar{
+   background-color: #004d80;;
+   
+   
+   
+ 
+    
+}
+
+
+h3{
+    color:white;
+}
+

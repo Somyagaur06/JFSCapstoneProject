@@ -1,0 +1,213 @@
+<mat-card class="text-center">
+
+<h2><b><i>Update Daily Logs</i></b></h2>
+
+
+<form class="p-3 text-center" #myForm="ngForm">
+
+
+    <div class="container-fluid">
+
+
+        
+    <div class="form-group">
+
+        <label><b><i>Date</i></b></label><br>
+        
+        <input type="date" name="date" class="dateInput" [(ngModel)]="dailyLogs.date"  >
+        
+        
+        </div>
+
+
+
+        <div class="row">
+
+<div class="form-group col-md-6">
+
+<label><b><i>Full Name</i></b></label><br>
+
+<input type="text" name="name" [(ngModel)]="dailyLogs.fullName" #name="ngModel" [class.is-invalid]="name.invalid && name.touched"  required>
+
+
+<div *ngIf="name.errors && (name.invalid || name.touched)">
+
+    <small *ngIf="name.errors.required" class="text-danger" [class.d-none]="name.untouched"><b><i>Full Name is required</i></b></small>
+
+</div>
+
+</div>
+
+
+
+
+<div class="form-group col-md-6">
+
+    <label><b><i>Breakfast</i></b></label><br>
+    
+    <input type="text" name="breakfast" [(ngModel)]="dailyLogs.breakfast" #breakfast="ngModel" [class.is-invalid]="breakfast.invalid && breakfast.touched"  required>
+    
+
+    <div *ngIf="breakfast.errors && (breakfast.invalid || breakfast.touched)">
+
+        <small *ngIf="breakfast.errors.required" class="text-danger" [class.d-none]="breakfast.untouched"><b><i>This field is required</i></b></small>
+    
+    </div>
+    
+    </div>
+
+        </div>
+
+
+
+
+
+
+<div class="row">
+
+    <div class="form-group col-md-6">
+
+        <label><b><i>Lunch</i></b></label><br>
+        
+        <input type="text" name="lunch" [(ngModel)]="dailyLogs.lunch" #lunch="ngModel" [class.is-invalid]="lunch.invalid && lunch.touched"  required>
+        
+        <div *ngIf="lunch.errors && (lunch.invalid || lunch.touched)">
+
+            <small *ngIf="lunch.errors.required" class="text-danger" [class.d-none]="lunch.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+        
+        </div>
+
+
+
+        <div class="form-group col-md-6">
+
+            <label><b><i>Dinner</i></b></label><br>
+            
+            <input type="text" name="dinner" [(ngModel)]="dailyLogs.dinner" #dinner="ngModel" [class.is-invalid]="dinner.invalid && dinner.touched"  required>
+            
+            <div *ngIf="dinner.errors && (dinner.invalid || dinner.touched)">
+
+                <small *ngIf="dinner.errors.required" class="text-danger" [class.d-none]="dinner.untouched"><b><i>This field is required</i></b></small>
+            
+            </div>
+            
+
+
+            </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+    <div class="form-group col-md-6">
+
+        <label><b><i>Fruits</i></b></label><br>
+        
+        <input type="text" name="fruits" [(ngModel)]="dailyLogs.fruits"  #fruits="ngModel" [class.is-invalid]="fruits.invalid && fruits.touched" required>
+        
+        <div *ngIf="fruits.errors && (fruits.invalid || fruits.touched)">
+
+            <small *ngIf="fruits.errors.required" class="text-danger" [class.d-none]="fruits.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+
+        </div>
+
+
+
+        <div class="form-group col-md-6">
+
+            <label><b><i>Vegetables</i></b></label><br>
+            
+            <input type="text" name="vegetables" [(ngModel)]="dailyLogs.vegetables" #vegetables="ngModel" [class.is-invalid]="vegetables.invalid && vegetables.touched"  required>
+            
+            <div *ngIf="vegetables.errors && (vegetables.invalid || vegetables.touched)">
+
+                <small *ngIf="vegetables.errors.required" class="text-danger" [class.d-none]="vegetables.untouched"><b><i>This field is required</i></b></small>
+            
+            </div>
+            
+            </div>
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="form-group col-md-6">
+
+        <label><b><i>WorkOut</i></b></label><br>
+        
+        <input type="text" name="workout" [(ngModel)]="dailyLogs.workout" #workout="ngModel" [class.is-invalid]="workout.invalid && workout.touched"  required>
+        
+        <div *ngIf="workout.errors && (workout.invalid || workout.touched)">
+
+            <small *ngIf="workout.errors.required" class="text-danger" [class.d-none]="workout.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+
+
+
+        </div>
+
+
+
+        <div class="form-group col-md-6">
+
+            <label><b><i>Extra Activity</i></b></label><br>
+            
+            <input type="text" name="extraActivity" [(ngModel)]="dailyLogs.extraActivity">
+
+            
+            
+            </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="p-2">
+<button type="submit" class="btn btn-primary " (click)="addDailyLogs()" [disabled]="myForm.form.invalid">Update</button>
+
+<button type="submit" class="btn btn-primary m-3" (click)="default()">Clear</button>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+</mat-card>

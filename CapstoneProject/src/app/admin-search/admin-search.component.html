@@ -1,0 +1,100 @@
+
+<mat-card>
+
+<form #searchForm="ngForm">
+
+    <div class="form-group text-center">
+ 
+        <label><b><i>Search By:</i></b></label><br>
+        
+        <select name="search" [(ngModel)]="searchValue">
+         
+            <option *ngFor="let options of searchOptions" >{{options}}</option>
+         </select><br>
+
+
+
+         <div class="form-group p-4 text-center" *ngIf="searchValue==='Username' || searchValue==='Full Name'" (change)="doDefault()">
+
+
+            <label><b><i>Enter {{searchValue}}</i></b></label><br>
+            <input type="text" name="value" class="form-input" [(ngModel)]="value">
+         </div>
+
+
+         <div class="form-group p-4 text-center" *ngIf="searchValue==='Batch Name'" (change)="doDefault()">
+            
+            <label><b><i>Select Batch Name</i></b></label><br>
+            <select name="batchName" [(ngModel)]="value">
+                <option value="Above Bmi 25">Above Bmi 25</option>
+
+                <option value="Below Bmi 25">Below Bmi 25</option>
+
+            </select>
+         </div>
+
+
+
+
+         <div class="form-group p-4 text-center" *ngIf="searchValue==='Batch Group'"(change)="doDefault()" >
+            
+            <label><b><i>Select Batch Group</i></b></label><br>
+            <select name="batchGroup" [(ngModel)]="value" >
+                <option name="Bengaluru">Bangalore</option>
+
+                <option name="New-Delhi">New-Delhi</option>
+
+                <option name="Chennai">Chennai</option>
+
+                <option name="Mumbai">Mumbai</option>
+
+                <option name="Hyderabad">Hyderabad</option>
+
+            </select>
+         </div>
+ </div>
+
+ <div>
+
+        <button type="submit" class="btn btn-primary" (click)="searchUsers()">Search</button>
+    </div>
+
+
+</form>
+</mat-card>
+
+
+
+
+
+<mat-card class="myTable" *ngIf="flag">
+
+<table  class="text-center  table table-striped ">
+<thead>
+<tr>
+<th class="p-4 text-center">Username</th>
+<th class="p-4 text-center">Full Name</th>
+<th class="p-4 text-center">User Role</th>
+<th class="p-4 text-center">Batch Name</th>
+<th class="p-4 text-center">Batch Group</th>
+
+</tr>
+
+</thead>
+
+
+<tr *ngFor="let users of user">
+
+    <td class="p-4 text-center">{{users.username}}</td>
+    <td class="p-4 text-center">{{users.name}}</td>
+    <td class="p-4 text-center">{{users.role}}</td>
+    <td class="p-4 text-center">{{users.batchName}}</td>
+    <td class="p-4 text-center">  {{users.batchGroup}}</td>
+</tr>
+
+
+
+</table>
+
+
+</mat-card>

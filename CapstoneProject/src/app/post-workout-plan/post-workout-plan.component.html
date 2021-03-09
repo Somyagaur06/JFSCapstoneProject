@@ -1,0 +1,63 @@
+<mat-card>
+
+
+
+    <div class="form-group text-center p-1"><h2><b><i>Upload File</i></b></h2></div>
+        
+    
+      
+      
+
+    <form>
+
+
+
+    <div class="form-group text-center">
+
+            <label><b><i>Post File To:</i></b></label><br>
+          
+            <select name="search" [(ngModel)]="postTo" (change)="findUsers()" >
+                
+               <option *ngFor="let options of postOptions" >{{options}}</option>
+            </select><br>
+        
+        </div>
+              
+        
+        <div class="form-group p-3 text-center" *ngIf="postTo!=null ">
+        
+           <label><b><i>Select {{postTo}}</i></b></label><br>
+        
+               <select [(ngModel)]="sentTo" name="send">
+        
+                   <option value="{{value}}" *ngFor="let value of userList" >{{value}}</option>
+        
+        
+               </select>
+        </div>
+        
+        <div class="text-center p-3"  *ngIf="postTo!=null">
+    
+            <input type="file"  id="customFile" name="filename" (change)="fileUpload($event)">
+            
+            </div>
+
+
+  
+
+        <div *ngIf="postTo!=null">
+ 
+ <button type="submit" class="btn btn-primary" (click)="sendFile()">Post File</button>
+ </div>
+ 
+ 
+ 
+    </form>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </mat-card>

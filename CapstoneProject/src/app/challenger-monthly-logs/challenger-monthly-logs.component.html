@@ -1,0 +1,225 @@
+<mat-card class="text-center">
+
+    <h2><b><i>Update Monthly Logs</i></b></h2>
+    
+    
+    <form class="p-5 text-center" #myForm="ngForm">
+    
+    
+        <div class="container-fluid">
+    
+    <div class="row">
+            
+        <div class="form-group col-md-6 ">
+    
+            <label><b><i> Select Month</i></b></label><br>
+            
+            <select name="month"  [(ngModel)]="monthlyLogs.month" >
+
+                <option value="July"><b><i>July</i></b></option>
+        
+                <option value="August"><b><i>August</i></b></option>
+        
+                <option value="September"><b><i>September</i></b></option>
+            </select>
+            
+            </div>
+    
+
+
+            <div class="form-group col-md-6 ">
+    
+                <label><b><i>Full Name</i></b></label><br>
+                
+                <input type="text" name="name" [(ngModel)]="monthlyLogs.fullName" #name="ngModel" [class.is-invalid]="name.invalid && name.touched"  required>
+                
+                
+                <div *ngIf="name.errors && (name.invalid || name.touched)">
+                
+                    <small *ngIf="name.errors.required" class="text-danger" [class.d-none]="name.untouched"><b><i>Full Name is required</i></b></small>
+                
+                </div>
+            </div>
+
+    </div>
+
+
+
+
+    
+    
+            <div class="row">
+    
+    
+    
+    <div class="form-group col-md-6">
+    
+        <label><b><i>Height</i></b></label><br>
+        
+        <input type="text" name="height" [(ngModel)]="monthlyLogs.height" #height="ngModel" [class.is-invalid]="height.invalid && height.touched"  required>
+        
+    
+        <div *ngIf="height.errors && (height.invalid || height.touched)">
+    
+            <small *ngIf="height.errors.required" class="text-danger" [class.d-none]="height.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+        </div>
+    
+
+        <div class="form-groip col-md-6">
+
+     <label><b><i>Weight</i></b></label><br>
+
+     <input type="text" name="weight" [(ngModel)]="monthlyLogs.weight" #weight="ngModel" [class.is-invalid]="weight.invalid && weight.touched" required>
+
+     <div *ngIf="weight.errors && (weight.invalid || weight.touched)">
+    
+        <small *ngIf="weight.errors.required" class="text-danger" [class.d-none]="weight.untouched"><b><i>This field is required</i></b></small>
+    
+    </div>
+    
+</div>
+ </div>
+    
+    
+    
+<div class="row">
+
+<div class="form-group col-md-6">
+
+<label><b><i>Waist </i></b></label><br>
+<input type="text" name="waist" [(ngModel)]="monthlyLogs.waist" #waist="ngModel" [class.is-invalid]="waist.invalid && waist.touched" required>
+
+<div *ngIf="waist.errors && (waist.invalid || waist.touched)">
+    
+    <small *ngIf="waist.errors.required" class="text-danger" [class.d-none]="waist.untouched"><b><i>This field is required</i></b></small>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group col-md-6">
+
+    <label><b><i>Chest </i></b></label><br>
+    <input type="text" name="chest" [(ngModel)]="monthlyLogs.chest" #chest="ngModel" [class.is-invalid]="chest.invalid && chest.touched" required>
+    
+    <div *ngIf="chest.errors && (chest.invalid || chest.touched)">
+        
+        <small *ngIf="chest.errors.required" class="text-danger" [class.d-none]="chest.untouched"><b><i>This field is required</i></b></small>
+    
+    </div>
+    
+    </div>
+
+</div>
+
+
+
+
+<div class="row">
+
+    <div class="form-group col-md-6">
+    
+    <label><b><i>Shoulders  </i></b></label><br>
+    <input type="text" name="shoulders" [(ngModel)]="monthlyLogs.shoulders" #shoulders="ngModel" [class.is-invalid]="shoulders.invalid && shoulders.touched" required>
+    
+    <div *ngIf="shoulders.errors && (shoulders.invalid || shoulders.touched)">
+        
+        <small *ngIf="shoulders.errors.required" class="text-danger" [class.d-none]="shoulders.untouched"><b><i>This field is required</i></b></small>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="form-group col-md-6">
+    
+        <label><b><i>Biceps </i></b></label><br>
+        <input type="text" name="biceps" [(ngModel)]="monthlyLogs.biceps" #biceps="ngModel" [class.is-invalid]="biceps.invalid && biceps.touched" required>
+        
+        <div *ngIf="biceps.errors && (biceps.invalid || biceps.touched)">
+            
+            <small *ngIf="biceps.errors.required" class="text-danger" [class.d-none]="biceps.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+        </div>
+    
+    </div>
+
+
+
+
+
+
+    
+    <div class="row">
+
+        <div class="form-group col-md-6">
+        
+        <label><b><i>Forearms </i></b></label><br>
+        <input type="text" name="forearms" [(ngModel)]="monthlyLogs.forearms" #forearms="ngModel" [class.is-invalid]="forearms.invalid && forearms.touched" required>
+        
+        <div *ngIf="forearms.errors && (forearms.invalid || forearms.touched)">
+            
+            <small *ngIf="forearms.errors.required" class="text-danger" [class.d-none]="forearms.untouched"><b><i>This field is required</i></b></small>
+        
+        </div>
+        
+        </div>
+        
+        
+        
+        <div class="form-group col-md-6">
+        
+            <label><b><i>Thighs </i></b></label><br>
+            <input type="text" name="thighs" [(ngModel)]="monthlyLogs.thighs" #thighs="ngModel" [class.is-invalid]="thighs.invalid && thighs.touched" required>
+            
+            <div *ngIf="thighs.errors && (thighs.invalid || thighs.touched)">
+                
+                <small *ngIf="thighs.errors.required" class="text-danger" [class.d-none]="thighs.untouched"><b><i>This field is required</i></b></small>
+            
+            </div>
+            
+            </div>
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    <div class="p-3">
+    <button type="submit" class="btn btn-primary " (click)="updateMonthlyLogs()" [disabled]="myForm.form.invalid">Update</button>
+
+    <button type="submit" class="btn btn-primary m-3" (click)="default()">Clear</button>
+    </div>
+    
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </mat-card>

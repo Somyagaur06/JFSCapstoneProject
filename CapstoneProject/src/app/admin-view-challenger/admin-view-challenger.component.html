@@ -1,0 +1,56 @@
+
+<mat-card class="text-center">
+
+
+    <mat-card-title><h2><b><i>Challenger Details</i></b></h2></mat-card-title>
+
+
+    <table class="text-center table table-striped">
+        <thead>
+        <tr>
+        <th class="p-4 text-center">Username</th>
+        <th class="p-4 text-center">Full Name</th>
+        <th class="p-4 text-center">Batch Name</th>
+        <th class="p-4 text-center">Batch Group</th>
+        <th class="p-4 text-center"><b><i>Modify</i></b></th>
+        <th class="p-4 text-center"><b><i>Delete</i></b></th>
+        
+        </tr>
+        
+        </thead>
+
+
+
+        <tr *ngFor="let data of user">
+
+          <td class="text-center p-4">{{data.username}}</td>  
+
+          <td class="text-center p-4">{{data.name}}</td>
+
+          <td class="text-center p-4">{{data.batchName}}</td>
+
+          <td class="text-center p-4">{{data.batchGroup}}</td>
+
+          <td class="text-center p-4" class="clickable" (click)="modifyChallenger(data)" ><i class="fa fa-pencil" style="font-size: 48px;color:green"></i></td>
+
+
+         <td class="text-center p-4" class="clickable" (click)="deleteChallenger(data)"><i class="fa fa-trash" style="font-size: 48px;color:red"></i></td>
+
+
+        </tr>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+</mat-card>

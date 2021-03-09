@@ -1,0 +1,45 @@
+
+mat-card{
+
+    width:20%;
+    margin: 60px auto;
+    background-color: floralwhite;
+}
+
+
+table{
+    margin-left: 20px;
+}
+
+
+select{
+    width: 85%;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    padding-left: 45px;
+}
+
+
+button{
+
+    border: 1px solid blue;
+    border-radius: 6px;
+}
+
+.myTable{
+    width: 80%;
+    margin: 60px auto;
+    
+    background-color: white;
+}
+
+th{
+
+    
+    background-color: #004d80;
+  color: white;
+}

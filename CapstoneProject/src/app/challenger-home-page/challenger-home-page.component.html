@@ -1,0 +1,119 @@
+<body>
+  
+    <div class="body1">
+          <div class="container-fluid">
+    <nav class="navbar navbar-dark navbar-expand-lg  pl-3">
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#toggle"
+        type="button"
+      ><span class="navbar-toggler-icon"></span></button>
+
+      <div id="toggle" class="collapse navbar-collapse text-center">
+        <ul class="navbar-nav">
+          <li class="nav-item p-2">
+            <a class="nav-link " routerLink="./motivatorHomePageWelcomePage" ><h3>
+                <b><i>Home</i></b>
+              </h3></a
+            >
+          </li>
+
+          
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./adminMessage"
+              ><h3>
+                <b><i>View-Message</i></b>
+              </h3></a
+            >
+          </li>
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./motivatorPostMessage"
+              ><h3>
+                <b><i>Post-Message</i></b>
+              </h3></a
+            >
+          </li>
+
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./downloadWorkoutPlan"
+              ><h3>
+                <b><i>Workout Plan</i></b>
+              </h3></a
+            >
+          </li>
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./search"
+              ><h3>
+                <b><i>Search</i></b>
+              </h3></a
+            >
+          </li>
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./motivatorProfile"
+              ><h3>
+                <b><i>Update Profile</i></b>
+              </h3></a
+            >
+          </li>
+
+         
+          
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./challengerDailyLogs"
+              ><h3>
+                <b><i>Update Daily Logs</i></b>
+              </h3></a
+            >
+          </li>
+
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./challengerMonthlyLogs"
+              ><h3>
+                <b><i>Update Monthly Logs</i></b>
+              </h3></a>
+          </li>
+
+          <li class="nav-item p-2" >
+            <a class="nav-link" routerLink="./donate"
+              ><h3>
+                <b><i>Donate</i></b>
+              </h3></a
+            >
+          </li>
+
+
+
+          <li class="nav-item p-2">
+            <a class="nav-link" routerLink="./changePassword"
+              ><h3>
+                <b><i>Change Password</i></b>
+              </h3></a
+            >
+          </li>
+
+          <li class="nav-item p-2" >
+            <a class="nav-link" routerLink="" (click)="logout()"
+              ><h3>
+                <b><i>Logout</i></b>
+              </h3></a
+            >
+          </li>
+
+          
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <router-outlet></router-outlet>
+  </div>
+  
+</body>

@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<mat-card>
+
+<table  class="table table-striped">
+
+    <thead>
+ <tr>
+ <th class="text-center p-4"><b><i>Full-Name</i></b></th>
+ <th class="text-center p-4"><b><i>Age</i></b></th>
+ <th class="text-center p-4"><b><i>Gender</i></b></th>
+ <th class="text-center p-4"><b><i>BMI</i></b></th>
+ <th class="text-center p-4"><b><i>Medical Condition</i></b></th>
+ <th class="text-center p-4"><b><i>Dietery Restrictions</i></b></th>
+ <th class="text-center p-4"><b><i>Dietery Custom</i></b></th>
+ <th class="text-center p-4"><b><i>Pregnancy Status</i></b></th>
+ <th class="text-center p-4"><b><i>Joining Reason</i></b></th>
+ <th class="text-center p-4"><b><i>Approve</i></b></th>
+ <th class="text-center p-4"><b><i>Reject</i></b></th>
+ </tr>
+ </thead>
+
+
+ <tr *ngFor="let data of requestData">
+
+<td class="text-center p-4">{{data.fullName}}</td>
+
+<td class="text-center p-4">{{data.age}}</td>
+
+<td class="text-center p-4">{{data.gender}}</td>
+
+<td class="text-center p-4">{{data.bmi}}</td>
+
+<td class="text-center p-4">{{data.medicalCondition}}</td>
+
+<td class="text-center p-4">{{data.dieteryRestriction}}</td>
+
+<td class="text-center p-4">{{data.dietery}}</td>
+
+<td class="text-center p-4">{{data.pregnancyStatus}}</td>
+
+<td class="text-center p-4">{{data.joiningReason}}</td>
+
+
+<td class="text-center p-4" class="clickable" (click)="approveChallengerRequest(data)" ><i class="fa fa-check" style="font-size: 48px;color:green"></i></td>
+
+
+<td class="text-center p-4" class="clickable" (click)="deleteChallengerRequest(data)"><i class="fa fa-trash" style="font-size: 48px;color:red"></i></td>
+
+
+</tr>
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+</mat-card>
+

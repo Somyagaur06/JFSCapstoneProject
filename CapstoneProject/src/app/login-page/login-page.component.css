@@ -1,0 +1,45 @@
+
+body{
+    background-image:url("/assets/l1.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.LoginForm{
+    
+    justify-content: center;
+    background-color:white;
+    height: 100vh;
+}
+
+
+.LoginForm2{
+  margin-top:30%;
+}
+
+.form-control{
+
+  width:70%;
+  margin-left: 85px;
+
+}
+
+button{
+  border:.5px solid blue;
+  
+}
+
+
+a{
+
+  text-decoration: none !important;
+  color: black;
+  
+}
+
+.title{
+  margin-top: 8%;
+  margin-left: 125px;
+
+}

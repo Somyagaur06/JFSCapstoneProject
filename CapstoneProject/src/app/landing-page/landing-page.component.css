@@ -1,0 +1,48 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .box{
+      position: relative;
+      margin: 0px;
+      
+      
+      
+  }
+  
+    
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 76px;
+    
+  }
+  
+  
+  .center{
+   position: absolute;
+    top: 50%;
+    left: 60%;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+  
+    
+  }
+  
+  
+  
+  h1{
+
+    font-size: xx-large;
+  }
+  
+  
+  
+a{
+  text-decoration: none !important;
+}
+  

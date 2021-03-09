@@ -1,0 +1,38 @@
+
+<mat-card class="text-center ">
+
+<h2><b><i>Show your Support</i></b></h2>
+
+
+<form class="p-5">
+    <div class="text-center text-danger" *ngIf="message===true"><b><i>Amount field cannot be 0</i></b></div>
+    <div class="form-group">
+        <label><b><i>Enter Amount</i></b></label><br>
+
+<input type="number" [(ngModel)]="amount" name="donate" (change)="default()">
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="success()">Donate</button>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mat-card>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <!-- Latest compiled and minified CSS -->
+<!-- CSS only -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+
+<link rel="stylesheet" href="login-page.component.css">
+
+<link href="login-page.component.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  
+
+    <div class="container-fluid ">
+
+        <div class="row">
+
+  <div class="col-sm-6 col-md-8  img-fluid imgStyle">
+
+
+
+  </div>
+
+  
+
+
+<div class="col-sm-6 col-md-4  LoginForm">
+  <h1 class="title"><b><i>Online Diet Management System</i></b></h1>
+
+  <div class="text-center LoginForm2">
+
+    
+    <h3><b><i>Login to continue</i></b></h3>
+    
+    <div  [class.d-none]="!invalidCredentials " class="text-danger p-3"><b><i>Invalid Credentials</i></b></div>
+
+<form #userForm="ngForm">
+
+  <!--Username fields -->
+
+<div class="form-group p-4">
+  <label><b><i>Username (Email)</i></b></label>
+
+  <input type="text" name="username" class="form-control" [(ngModel)]="loginData.username" #username="ngModel"  [class.is-invalid]="username.touched && username.invalid"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required (change)="defaultValue()">
+
+
+<div *ngIf="username.errors && (username.touched || username.invalid)">
+  <small *ngIf="username.errors.required" class="text-danger" [class.d-none]="username.untouched">Username is required</small>
+  <small *ngIf="username.errors.pattern" class="text-danger" [class.d-none]="username.untouched">Enter in correct format(Eg someone@demo.com)</small>
+</div>
+
+</div>
+
+<!--Username fields end -->
+
+
+
+<!--Password field -->
+<div class="form-group p-4">
+
+<label><b><i>Password</i></b></label>
+<input type="password" name="password" class="form-control" [(ngModel)]="loginData.password" #password="ngModel" [class.is-invalid]="password.touched && password.invalid"
+ required>
+
+ <div *ngIf="password.errors && (password.untouched || password.invalid)">
+
+   <small *ngIf="password.errors.required" class="text-danger" [class.d-none]="password.untouched">Password is required</small>
+ </div>
+</div>
+
+<!--Password ends -->
+
+
+<button type="submit" value="login" class="btn btn-primary " [disabled]="userForm.form.invalid" (click)="loginUser()"> Login</button><br>
+
+<a href=""  class="p-4" (click)="goBack()"><h3><b><i>Go Back</i></b></h3></a>
+
+<div class="p-2 clickable" (click)="forgotPassword()" ><h3><b><i>Forgot Password ?</i></b></h3></div>
+
+<a routerLink="/register"><h3><b><i>New User?Register Here</i></b></h3></a>
+
+
+</form>
+</div>
+</div> 
+  
+
+</div>
+</div>
+
+
+
+</body>

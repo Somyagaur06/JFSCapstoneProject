@@ -1,0 +1,18 @@
+
+mat-card{
+    width: 55%;
+    margin: 60px auto;
+    background-color: white;
+}
+
+.clickable{
+    cursor:pointer;
+    outline:none;
+}
+
+th{
+    
+    background-color: #004d80;
+  color: white;
+}
+

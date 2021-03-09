@@ -1,0 +1,95 @@
+
+<h2 class="text-center p-4"><b><i>Modify User Details</i></b></h2>
+
+
+
+<form>
+
+<div class="text-center form-group ">
+
+<label class="text-center"><b><i>Username</i></b></label><br>
+
+<input type="text" name="username" class="form-control" disabled [(ngModel)]="data.username">
+
+</div>
+
+
+
+<div class="text-center form-group">
+
+    <label class="text-center"><b><i>Full Name</i></b></label><br>
+    
+    <input type="text" name="name" class="form-control"  [(ngModel)]="data.name" disabled>
+    
+    </div>
+
+
+    <div class="form-group text-center">
+
+        <label class="text-center"><b><i>Select Batch</i></b></label><br>
+        
+        <select name="batch" [(ngModel)]="data.batchMonth" class="form-control">
+    
+            <option *ngFor="let data of batches" value={{data}}>{{data}}</option>
+        </select>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+<div class="text-center form-group">
+
+    <label class="text-center"><b><i>Batch Name</i></b></label><br>
+
+<select name="batchName" [(ngModel)]="data.batchName" class="form-control">
+
+    <option name="belowBmi25">Above Bmi 25</option>
+    <option name="aboveBmi25">Below Bmi 25</option>
+</select>
+
+</div>
+
+
+
+<div class="text-center form-group" *ngIf="data.batchName==='Above Bmi 25'">
+
+    <label class="text-center"><b><i>Batch Group</i></b></label><br>
+
+<select name="batchGroup" [(ngModel)]="data.batchGroup" class="form-control">
+
+    
+    <option name="Bangalore">Bangalore</option>
+
+    <option name="New-Delhi">New-Delhi</option>
+
+    <option name="Chennai">Chennai</option>
+
+   <option name="Mumbai">Mumbai</option>
+
+    <option name="Hyderabad">Hyderabad</option>
+</select>
+
+</div>
+
+<div>
+    <button type="submit" class="btn btn-primary" (click)="modify()">Modify</button>
+    <button type="submit" class="btn btn-primary" mat-dialog-close>Go Back</button>
+
+</div>
+
+
+
+</form>
